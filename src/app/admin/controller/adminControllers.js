@@ -19,7 +19,6 @@ angular.module("sportsStoreAdmin")
             });
 
     }
-
 })
 .controller("mainController",function($scope){
    $scope.screens=["Products","Orders"];

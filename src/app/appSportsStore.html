@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="sportsStore">
+<head>
+    <title>SportsStore</title>
+    <script src="../bower_components/angular/angular.js"></script>
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap.css">
+    <link rel="stylesheet" href="../bower_components/bootstrap-css/css/bootstrap-theme.css">
+    <script src="ngmodules/sportsStoreController_and_ngRoute.js"></script>
+    <script src="controllers/sportsStore.js"></script>
+    <script src="filters/customFilters.js"></script>
+    <script src="controllers/productListController.js"></script>
+    <script src="components/cart/cart.js"></script>
+    <script src="../node_modules/angular-route/angular-route.js"></script>
+    <script src="controllers/checkoutController.js"></script>
+
+
+
+</head>
+<body ng-controller="sportsStoreController">
+<div class="navbar navbar-inverse">
+    <a class="navbar-brand" href="#">SPORTS STORE</a>
+    <cart-summary></cart-summary>
+</div>
+
+<div class="alert alert-danger" ng-show="data.error">
+    Error {{data.error.status}}. The product data was not loaded.
+    <a href="appSportsStore.html" class="alert-link">
+        Click here to try again!
+    </a>
+</div>
+
+<!--<ng-include src="'views/productList.html'"></ng-include>-->
+<ng-view />
+
+</body>
+</html>
